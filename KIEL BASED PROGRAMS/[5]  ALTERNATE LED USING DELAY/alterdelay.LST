@@ -1,0 +1,74 @@
+C51 COMPILER V9.03   ALTERDELAY                                                            02/14/2013 22:24:45 PAGE 1   
+
+
+C51 COMPILER V9.03, COMPILATION OF MODULE ALTERDELAY
+OBJECT MODULE PLACED IN alterdelay.OBJ
+COMPILER INVOKED BY: C:\Keil\C51\BIN\C51.EXE alterdelay.c BROWSE DEBUG OBJECTEXTEND
+
+line level    source
+
+   1          /*program for alternate LED ON-OF with P1
+   2          p1.7  p1.7  p1.5  p1.4  p1.3  p1.2  p1.1  p1.0
+   3          on    off    on   off    on   off    on   off
+   4          
+   5          1 second later
+   6          
+   7          p1.7  p1.7  p1.5  p1.4  p1.3  p1.2  p1.1  p1.0
+   8          off    on   off  on   off    on   off     on
+   9          
+  10          */
+  11          
+  12          
+  13          #include<regx51.h>
+  14          
+  15                   
+  16                                           void delayms(unsigned int i)
+  17          {
+  18   1       int c=0;
+  19   1       while(c<i)
+  20   1       {
+  21   2        TMOD=0x01;
+  22   2        TH0=0xFC;
+  23   2        TL0=0x66;
+  24   2        TR0=1;
+  25   2        while(!TF0);
+  26   2        TR0=0;
+  27   2        TL0=0;
+  28   2        c++;
+  29   2       }
+  30   1      
+  31   1      }
+  32          
+  33          
+  34          void main()
+  35          {
+  36   1         while(1)
+  37   1         {
+  38   2              P1=0xAA;
+  39   2              delayms(1000);
+  40   2              P1=0x55;
+  41   2              delayms(1000);
+  42   2      
+  43   2      
+  44   2      
+  45   2         }
+  46   1      
+  47   1      
+  48   1      
+  49   1      }
+
+
+MODULE INFORMATION:   STATIC OVERLAYABLE
+   CODE SIZE        =     55    ----
+   CONSTANT SIZE    =   ----    ----
+   XDATA SIZE       =   ----    ----
+C51 COMPILER V9.03   ALTERDELAY                                                            02/14/2013 22:24:45 PAGE 2   
+
+   PDATA SIZE       =   ----    ----
+   DATA SIZE        =   ----    ----
+   IDATA SIZE       =   ----    ----
+   BIT SIZE         =   ----    ----
+END OF MODULE INFORMATION.
+
+
+C51 COMPILATION COMPLETE.  0 WARNING(S),  0 ERROR(S)

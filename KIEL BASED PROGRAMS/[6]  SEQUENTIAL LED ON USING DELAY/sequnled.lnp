@@ -1,0 +1,4 @@
+"STARTUP.obj",
+"sequnled.obj" 
+TO "sequnled" 
+RAMSIZE(256) 

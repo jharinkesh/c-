@@ -1,0 +1,4 @@
+"STARTUP.obj",
+"LEDON.obj" 
+TO "LEDON" 
+RAMSIZE(256) 

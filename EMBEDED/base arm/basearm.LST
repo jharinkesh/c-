@@ -1,0 +1,69 @@
+C51 COMPILER V9.03   BASEARM                                                               03/01/2013 14:10:09 PAGE 1   
+
+
+C51 COMPILER V9.03, COMPILATION OF MODULE BASEARM
+OBJECT MODULE PLACED IN basearm.OBJ
+COMPILER INVOKED BY: C:\Keil\C51\BIN\C51.EXE basearm.c BROWSE DEBUG OBJECTEXTEND
+
+line level    source
+
+   1          #include<regx51.h>
+   2          
+   3          sbit swtc=P1^0;
+   4          sbit swta=P1^1;
+   5          
+   6          void motor(int i)
+   7          {
+   8   1      if(i==1)
+   9   1      P3=0x06;
+  10   1      else if(i==2)
+  11   1      P3=0x09;
+  12   1      else 
+  13   1      P3=0x00;
+  14   1      }
+  15          
+  16          
+  17          void main()
+  18          {
+  19   1      swtc=1;
+  20   1      swtc=0;
+  21   1      swta=1;
+  22   1      swta=0;
+  23   1      
+  24   1      
+  25   1      while(1)
+  26   1      {
+  27   2      
+  28   2      if((swtc==1)&&(swta==1))
+  29   2      P3=0x00;
+  30   2      
+  31   2      else if((swtc==0)&&(swta==0))
+  32   2      P3=0x00;
+  33   2      
+  34   2      else if((swtc==1)&&(swta==0))
+  35   2      motor(1);
+  36   2      
+  37   2      else if((swtc==0)&&(swta==1))
+  38   2      motor(2);
+  39   2      
+  40   2      else
+  41   2      P3=0x00;
+  42   2      }
+  43   1      
+  44   1      }
+
+
+MODULE INFORMATION:   STATIC OVERLAYABLE
+   CODE SIZE        =     81    ----
+   CONSTANT SIZE    =   ----    ----
+   XDATA SIZE       =   ----    ----
+   PDATA SIZE       =   ----    ----
+   DATA SIZE        =   ----    ----
+   IDATA SIZE       =   ----    ----
+   BIT SIZE         =   ----    ----
+END OF MODULE INFORMATION.
+
+C51 COMPILER V9.03   BASEARM                                                               03/01/2013 14:10:09 PAGE 2   
+
+
+C51 COMPILATION COMPLETE.  0 WARNING(S),  0 ERROR(S)

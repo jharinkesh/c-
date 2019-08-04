@@ -1,0 +1,4 @@
+"STARTUP.obj",
+"eight.obj" 
+TO "eight" 
+RAMSIZE(256) 
