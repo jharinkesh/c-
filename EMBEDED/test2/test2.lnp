@@ -1,4 +1,0 @@
-"STARTUP.obj",
-"test2.obj" 
-TO "test2" 
-RAMSIZE(256) 

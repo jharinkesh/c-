@@ -1,4 +1,0 @@
-"STARTUP.obj",
-"basearm.obj" 
-TO "basearm" 
-RAMSIZE(256) 

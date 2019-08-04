@@ -1,4 +1,0 @@
-"STARTUP.obj",
-"armbase.obj" 
-TO "armbase" 
-RAMSIZE(256) 

@@ -1,4 +1,0 @@
-"STARTUP.obj",
-"alterled.obj" 
-TO "alterled" 
-RAMSIZE(256) 

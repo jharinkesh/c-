@@ -1,4 +1,0 @@
-"STARTUP.obj",
-"counterswitch.obj" 
-TO "counterswitch" 
-RAMSIZE(256) 

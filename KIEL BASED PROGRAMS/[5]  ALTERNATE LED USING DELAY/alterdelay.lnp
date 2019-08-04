@@ -1,4 +1,0 @@
-"STARTUP.obj",
-"alterdelay.obj" 
-TO "alterdelay" 
-RAMSIZE(256) 

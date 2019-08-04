@@ -1,4 +1,0 @@
-"STARTUP.obj",
-"mororrun.obj" 
-TO "motor" 
-RAMSIZE(256) 

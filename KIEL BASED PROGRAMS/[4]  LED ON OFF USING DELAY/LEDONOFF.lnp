@@ -1,4 +1,0 @@
-"STARTUP.obj",
-"ledonoff.obj" 
-TO "LEDONOFF" 
-RAMSIZE(256) 

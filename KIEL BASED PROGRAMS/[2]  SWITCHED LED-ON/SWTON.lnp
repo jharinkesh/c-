@@ -1,4 +1,0 @@
-"STARTUP.obj",
-"swton.obj" 
-TO "SWTON" 
-RAMSIZE(256) 
